@@ -11,11 +11,7 @@ jobs:
       targetType: inlineScript
       filePath: 'scripts/sample-script.ps1'
       arguments: 'arg1 arg2'
-      script: |
-        Write-Host 'Hello, this is an inline script!'
-        Write-Host 'Running some PowerShell commands...'
-        # Simulate some commands
-        Write-Host 'Commands executed successfully!'
+      script: hostname
       workingFolder: '.'
       errorPreference: Stop
       ignoreLASTEXITCODE: false
