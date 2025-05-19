@@ -1,0 +1,19 @@
+name: Call Run PowerShell Script Template e213ff0f-5d5c-4791-802d-52ea3e7be1f1
+
+on:
+  push:
+    branches: [ main, feature/dk* ]
+
+jobs:
+  run-ps-script:
+    uses: ./.github/workflows/template_powershell_e213ff0f-5d5c-4791-802d-52ea3e7be1f1.yml
+    with:
+      targetType: inlineScript
+      filePath: 'scripts/sample-script.ps1'
+      arguments: 'arg1 arg2'
+      script: |
+        Write-Host 'Hello, this is an inline script!'
+        Write-Host 'Running some PowerShell commands...'
+      workingFolder: '.'
+      errorPreference: Stop
+      ignoreLASTEXITCODE: false
