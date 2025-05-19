@@ -6,7 +6,7 @@ on:
 
 jobs:
   run-ps-script:
-    uses: kiranvattikuti146/POWERSHELL-REUSABLE/.github/workflows/reusable.yml@main
+    uses: ./.github/workflows/template_powershell_e213ff0f-5d5c-4791-802d-52ea3e7be1f1.yml
     with:
       targetType: inlineScript
       filePath: 'scripts/sample-script.ps1'
@@ -14,6 +14,8 @@ jobs:
       script: |
         Write-Host 'Hello, this is an inline script!'
         Write-Host 'Running some PowerShell commands...'
+        # Simulate some commands
+        Write-Host 'Commands executed successfully!'
       workingFolder: '.'
       errorPreference: Stop
       ignoreLASTEXITCODE: false
