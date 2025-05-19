@@ -2,18 +2,25 @@ name: Call Run PowerShell Script Template e213ff0f-5d5c-4791-802d-52ea3e7be1f1
 
 on:
   push:
-    branches: [ main, feature/dk* ]
+    branches: [ main , feature/dk*]
+  # workflow_dispatch:
+  #   inputs:
+  #     run:
+  #       description: "Should this workflow run?"
+  #       required: true
+  #       default: "yes"
 
 jobs:
   run-ps-script:
-    uses: kiranvattikuti146/POWERSHELL-REUSABLE/.github/workflows/reusable.yml@main
+    # if: github.event_name == 'workflow_dispatch' && inputs.run == 'yes' 
+    uses: ./.github/workflows/template_powershell_e213ff0f-5d5c-4791-802d-52ea3e7be1f1.yml
     with:
-      targetType: inlineScript
-      filePath: 'scripts/sample-script.ps1'
-      arguments: 'arg1 arg2'
-      script: |
-        Write-Host 'Hello, this is an inline script!'
-        Write-Host 'Running some PowerShell commands...'
+      scriptType: inlineScript #filePath
+      scriptName: 'scripts/sample-script.ps1'
+      arguments: 'arg1  arg2 '
       workingFolder: '.'
-      errorPreference: Stop
-      ignoreLASTEXITCODE: false
+      # #inlineScript: # string. Required when scriptType = inlineScript. Inline Script.
+      inlineScript: |
+         Write-Host 'Hello, this is an inline script!'
+         Write-Host 'Running some PowerShell commands...'
+      failOnStandardError: true
