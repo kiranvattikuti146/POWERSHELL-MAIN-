@@ -6,7 +6,7 @@ on:
 
 jobs:
   run-ps-script:
-    uses: kiranvattikuti146/POWERSHELL-REUSABLE-V2/.github/workflows/reusable.yml@main
+    uses: kiranvattikuti146/POWERSHELL-REUSABLE-V2/.github/workflows/powershell-Reusable.yml@main
     with:
       targetType: inlineScript
       filePath: 'scripts/sample-script.ps1'
