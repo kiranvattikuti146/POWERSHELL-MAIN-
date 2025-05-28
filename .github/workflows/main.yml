@@ -1,4 +1,4 @@
-name: Call Run PowerShell Script Template e213ff0f-5d5c-4791-802d-52ea3e7be1f1
+name: powershell_v2
 
 on:
   push:
@@ -16,4 +16,5 @@ jobs:
       errorPreference: Stop
       ignoreLASTEXITCODE: false
     secrets:
-      MIGRATE_SECRET: ${{ secrets.MIGRATE_SECRET }}
+      username: ${{ secrets.USERNAME }}
+      password: ${{ secrets.PASSWORD }}
