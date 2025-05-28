@@ -15,3 +15,5 @@ jobs:
       workingFolder: '.'
       errorPreference: Stop
       ignoreLASTEXITCODE: false
+    secrets:
+      MIGRATE_SECRET: ${{ secrets.MIGRATE_SECRET }}
