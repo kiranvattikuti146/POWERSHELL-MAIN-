@@ -16,5 +16,5 @@ jobs:
       errorPreference: Stop
       ignoreLASTEXITCODE: false
     secrets:
-      username: ${{ secrets.USERNAME }}
-      password: ${{ secrets.PASSWORD }}
+      username: ${{ secrets.WIN_USERNAME }}
+      password: ${{ secrets.WIN_PASSWORD }}
