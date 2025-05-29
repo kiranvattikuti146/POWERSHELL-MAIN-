@@ -11,7 +11,7 @@ jobs:
       targetType: inlineScript
       filePath: 'scripts/sample-script.ps1'
       arguments: 'arg1 arg2'
-      script: 'Get-Process * 2>&1 > c:\users\azureuser\desktop\modified_output.txt'
+      script: hostname
       workingFolder: '.'
       errorPreference: Stop
       ignoreLASTEXITCODE: false
