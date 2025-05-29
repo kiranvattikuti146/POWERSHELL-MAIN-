@@ -15,6 +15,3 @@ jobs:
       workingFolder: '.'
       errorPreference: Stop
       ignoreLASTEXITCODE: false
-    secrets:
-      username: ${{ secrets.WIN_USERNAME }}
-      password: ${{ secrets.WIN_PASSWORD }}
