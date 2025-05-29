@@ -11,7 +11,7 @@ jobs:
       targetType: inlineScript
       filePath: 'scripts/sample-script.ps1'
       arguments: 'arg1 arg2'
-      script: 'Hello, this is an inline script!'
+      script: hostname
       workingFolder: '.'
       errorPreference: Stop
       ignoreLASTEXITCODE: false
