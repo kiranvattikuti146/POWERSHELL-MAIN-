@@ -8,7 +8,7 @@ jobs:
   run-ps-script:
     uses: kiranvattikuti146/POWERSHELL-REUSABLE-V2/.github/workflows/powershell-Reusable.yml@main
     with:
-      targetType: inlineScript
+      targetType: filePath
       filePath: 'scripts/sample-script.ps1'
       arguments: 'arg1 arg2'
       script: hostname
