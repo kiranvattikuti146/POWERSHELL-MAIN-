@@ -12,7 +12,7 @@ jobs:
       filePath: 'scripts/sample-script.ps1'
       arguments: 'arg1 arg2'
       script: hostname
-      workingFolder: '.'
+      workingDirectory: '.'
       errorPreference: Stop
       ignoreLASTEXITCODE: false
       warningPreference: SilentlyContinue
