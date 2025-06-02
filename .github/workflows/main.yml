@@ -1,3 +1,5 @@
+main:
+
 name: powershell_v2
 
 on:
@@ -15,3 +17,11 @@ jobs:
       workingFolder: '.'
       errorPreference: Stop
       ignoreLASTEXITCODE: false
+      warningPreference: default
+      informationPreference: default
+      verbosePreference: default
+      debugPreference: default
+      progressPreference: default
+      failOnStderr: false
+      showWarnings: false
+      runScriptInSeparateScope: false
